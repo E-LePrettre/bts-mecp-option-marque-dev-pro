@@ -1,2 +1,1 @@
-# bts-mecp-option-marque-dev-pro
-Copie des ressources BTS MECP Option Marque — Développement professionnel
+Rendu du site : [https://eleprettre.forge.apps.education.fr/bts-mecp-option-marque-dev-pro](https://eleprettre.forge.apps.education.fr/bts-mecp-option-marque-dev-pro) 

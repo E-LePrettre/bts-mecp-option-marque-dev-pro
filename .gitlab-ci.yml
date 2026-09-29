@@ -1,0 +1,28 @@
+image: python:3.11
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+
+  cache:
+    paths:
+      - .cache/pip
+
+  before_script:
+    - python --version
+    - pip --version
+    - pip install --cache-dir .cache/pip mkdocs-material mkdocs-awesome-pages-plugin mkdocs-macros-plugin
+
+  script:
+    - mkdocs --version
+    - mkdocs build --site-dir public --clean
+
+  artifacts:
+    paths:
+      - public
+
